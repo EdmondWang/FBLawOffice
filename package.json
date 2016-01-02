@@ -4,7 +4,7 @@
   "description": "",
   "main": "server/server.js",
   "scripts": {
-    "data": "node server/dataServer.js",
+    "data": "node server/mwServer.js",
     "web": "node server/staticServer.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -33,6 +33,7 @@
     "coffee-script": "^1.10.0",
     "css-loader": "^0.22.0",
     "express": "^4.13.3",
+    "jade": "^1.11.0",
     "jquery": "^2.1.4",
     "jsx-loader": "^0.13.2",
     "react": "^0.14.5",

@@ -1,6 +1,6 @@
 var React = require('react');
 // var $ = require('jquery');
-var commentBoxCss = require('../css/CommentBox.css');
+var commentBoxCss = require('../../css/demo/CommentBox.css');
 
 var Comment = React.createClass({
   displayName: 'Comment',
