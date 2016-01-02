@@ -1,3 +1,12 @@
+.commentList {
+  margin-bottom: 10px;
+}
+
+.comment {
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
 .commentAuthor {
   font-size: 12px;
   color: #444;
@@ -6,5 +15,11 @@
 
 .commentText {
   font-size: 12px;
-  color: #ddd;
+  color: #aaa;
+}
+
+.commentForm {
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 5px;
 }

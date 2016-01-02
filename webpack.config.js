@@ -2,13 +2,13 @@ var webpack = require("webpack");
 
 module.exports = {
   entry: [
-    'webpack-dev-server/client?http://127.0.0.1:3000', // WebpackDevServer host and port
+    'webpack-dev-server/client?http://127.0.0.1:3001', // WebpackDevServer host and port
     'webpack/hot/only-dev-server',
     __dirname + '/web/js/entry' // Your appʼs entry point
   ],
   output: {
-    path: __dirname + '/build',
-    publicPath: __dirname + '/web/',
+    path: __dirname +'/build',
+    publicPath: 'http://127.0.0.1:3001/web/',
     filename: 'bundle.js', // '[hash:8].[name].min.js'
   },
   module: {

@@ -56,8 +56,8 @@ var CommentForm = React.createClass({
   render: function() {
     return (
       <form className='commentForm' onSubmit={this.handleSubmit}>
-        <input type='text' placeholder='Your name' value={this.author} onChange={this.handleAuthorChange} />
-        <input type='text' placeholder='Say something' value={this.text} onChange={this.handleTextChange} />
+        <input type='text' placeholder='Your name' value={this.state.author} onChange={this.handleAuthorChange} />
+        <input type='text' placeholder='Say something' value={this.state.text} onChange={this.handleTextChange} />
         <input type='submit' value='post' />
       </form>
     )
@@ -70,7 +70,7 @@ var CommentBox = React.createClass({
   },
   loadCommentsFromServer: function() {
     $.ajax({
-      url: '/',
+      url: '/comments',
       method: 'GET',
       success: function(data) {
         this.setState({'data': data});
@@ -83,7 +83,7 @@ var CommentBox = React.createClass({
   handleCommentSubmit: function(comment) {
     debugger;
     $.ajax({
-      url: '/',
+      url: '/comments',
       method: 'POST',
       dataType: 'JSON',
       data: comment,
