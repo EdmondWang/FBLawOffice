@@ -1,7 +1,36 @@
 html {
   width: 100%;
+  min-width: 1000px;
   height: 100%;
   overflow: hidden;
+  overflow-x: auto;
+}
+
+@font-face {
+  font-family: 'Antenna-Bold';
+  src: url('../font/Antenna-Bold/Antenna-Bold.eot?#iefix') format('embedded-opentype'),  url('../font/Antenna-Bold/Antenna-Bold.otf')  format('opentype'),
+	     url('../font/Antenna-Bold/Antenna-Bold.woff') format('woff'), url('../font/Antenna-Bold/Antenna-Bold.ttf')  format('truetype'), url('../font/Antenna-Bold/Antenna-Bold.svg#Antenna-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Antenna-Light';
+  src: url('../font/Antenna-Light/Antenna-Light.eot?#iefix') format('embedded-opentype'),  url('../font/Antenna-Light/Antenna-Light.otf')  format('opentype'),
+	     url('../font/Antenna-Light/Antenna-Light.woff') format('woff'), url('../font/Antenna-Light/Antenna-Light.ttf')  format('truetype'), url('../font/Antenna-Light/Antenna-Light.svg#Antenna-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Antenna-Light';
+  width: 100%;
+  height: 100%;
+}
+
+#app-top {
+  padding-top: 36px;
+  padding-bottom: 10px;
 }
 
 .app-searchAndLang {
@@ -17,6 +46,7 @@ ul.app-menu {
 }
 
 li.app-menu-item {
+  letter-spacing: 4px;
   text-align: center;
   vertical-align: middle;
   padding: 0;
@@ -24,14 +54,16 @@ li.app-menu-item {
   display: table-cell;
 }
 
-li.app-menu-item a:link {
+li.app-menu-item a {
   font-weight: bold;
-  color: #000;
+  color: #555;
+  text-decoration: none;
 }
 
 li.app-menu-item a:visited {
   font-weight: bold;
-  color: #000;
+  color: #555;
+  text-decoration: none;
 }
 
 li.app-menu-item a:hover {
@@ -42,6 +74,47 @@ li.app-menu-item a:hover {
 
 li.app-menu-item a:active {
   font-weight: bold;
-  color: #000;
+  color: #555;
+  text-decoration: none;
 }
 /* app-menu ends */
+
+#app-bottom {
+  font-size: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+#app-bottom a {
+  color: #555;
+  text-decoration: none;
+}
+
+#app-bottom a:visited {
+  color: #555;
+  text-decoration: none;
+}
+
+#app-bottom a:hover {
+  color: #A62B4D;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#app-bottom a:active {
+  color: #555;
+  text-decoration: none;
+}
+
+.app-bottom-siteMap {
+  text-align: right;
+}
+
+.app-bottom-legalDeclaration {
+  text-align: right;
+}
+
+.app-bottom-wechat {
+  text-align: right;
+}

@@ -4,42 +4,60 @@ html
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1')
-    title #{__('APP_TITLE')}
+    title #{__('APP_Title')}
     link(href='/bootstrap/dist/css/bootstrap.css' rel='stylesheet')
     link(href='/css/layout.css' rel='stylesheet')
     body
       div#app-top
-        div.container
+        div.container-fluid
           div.row
-            div.col-sm-6.col-md-6.col-lg-6
-              img(src='/img/logo-fullName_180x27.png' alt='#{__("APP_TITLE")}')
-            div.col-sm-6.col-md-6.col-lg-6
+            div.col-sm-1.col-md-1.col-lg-1
+            div.col-sm-5.col-md-5.col-lg-5
+              a(href='/')
+                img(src='/img/logo-fullName_250x40.png' alt='#{__("APP_Title")}')
+            div.col-sm-5.col-md-5.col-lg-5
               div.app-searchAndLang
                 input
+            div.col-sm-1.col-md-1.col-lg-1
       nav#app-nav
-        div.container
-          ul.app-menu
-            li.app-menu-item
-              a(href='#') #{__('MENU_OURROAD')}
-            li.app-menu-item
-              a(href='#') #{__('MENU_NEWS&DEALS')}
-            li.app-menu-item
-              a(href='#') #{__('MENU_OURPRACTICES')}
-            li.app-menu-item
-              a(href='#') #{__('MENU_OURPROFESSIONALS')}
-            li.app-menu-item
-              a(href='#') #{__('MENU_OURPUBLICATIONS')}
-            li.app-menu-item
-              a(href='#') #{__('MENU_OUROFFICES')}
-            li.app-menu-item
-              a(href='#') #{__('MENU_GLOBALREACH')}
-            li.app-menu-item
-              a(href='#') #{__('MENU_CAREERS')}
-            li.app-menu-item
-              a(href='#') #{__('MENU_CONTACTUS')}
+        div.container-fluid
+          div.row
+            div.col-sm-1.col-md-1.col-lg-1
+            div.col-sm-10.col-md-10.col-lg-10
+              ul.app-menu
+                li.app-menu-item
+                  a(href='#') #{__('MENU_OurRoad')}
+                li.app-menu-item
+                  a(href='#') #{__('MENU_News&Deals')}
+                li.app-menu-item
+                  a(href='#') #{__('MENU_OurPractices')}
+                li.app-menu-item
+                  a(href='#') #{__('MENU_OurProfessional')}
+                li.app-menu-item
+                  a(href='#') #{__('MENU_OurPublications')}
+                li.app-menu-item
+                  a(href='#') #{__('MENU_OurOffices')}
+                li.app-menu-item
+                  a(href='#') #{__('MENU_GlobalReach')}
+                li.app-menu-item
+                  a(href='#') #{__('MENU_Careers')}
+                li.app-menu-item
+                  a(href='#') #{__('MENU_ContactUs')}
+            div.col-sm-1.col-md-1.col-lg-1
       div#app-middle
-      block content
-      div#app-bottom footer
+        block content
+      div#app-bottom
+        div.container-fluid
+          div.col-sm-1.col-md-1.col-lg-1
+          div.col-sm-7.col-md-7.col-lg-7
+            p #{__('BOTTOM_Rights')}
+          div.col-sm-1.col-md-1.col-lg-1.app-bottom-siteMap
+            a(href='#') #{__('BOTTOM_SiteMap')}
+          div.col-sm-1.col-md-1.col-lg-1.app-bottom-legalDeclaration
+            a(href='#') #{__('BOTTOM_LegalDeclaration')}
+          div.col-sm-1.col-md-1.col-lg-1.app-bottom-wechat
+            p wechat
+          div.col-sm-1.col-md-1.col-lg-1
       script(type='text/javascript' src='/jquery/dist/jquery.js')
       script(type='text/javascript' src='/bootstrap/dist/js/bootstrap.js')
       script(type='text/javascript' src='/js/layout.js')

@@ -1,13 +1,17 @@
 {
-    "APP_TITLE": "方本律师事务所",
+    "APP_Title": "方本律师事务所",
 
-    "MENU_OURROAD": "方本之道",
-    "MENU_NEWS&DEALS": "新闻及业绩",
-    "MENU_OURPRACTICES": "专业领域",
-    "MENU_OURPROFESSIONALS": "专业人员",
-    "MENU_OURPUBLICATIONS": "方本论著",
-    "MENU_OUROFFICES": "办公地点",
-    "MENU_GLOBALREACH": "国际平台",
-    "MENU_CAREERS": "加入我们",
-    "MENU_CONTACTUS": "联系我们"
+    "MENU_OurRoad": "方本之道",
+    "MENU_News&Deals": "新闻及业绩",
+    "MENU_OurPractices": "专业领域",
+    "MENU_OurProfessional": "专业人员",
+    "MENU_OurPublications": "方本论著",
+    "MENU_OurOffices": "办公地点",
+    "MENU_GlobalReach": "国际平台",
+    "MENU_Careers": "加入我们",
+    "MENU_ContactUs": "联系我们",
+
+    "BOTTOM_Rights": "©方本律师事务所版权所有 苏ICP备11033038号",
+    "BOTTOM_SiteMap": "Site Map",
+    "BOTTOM_LegalDeclaration": "法律声明"
 }
