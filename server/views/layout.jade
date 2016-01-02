@@ -4,12 +4,13 @@ html
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1')
-    title Fang Ben Law Office
+    title #{__('APP_TITLE')}
     link(href='/bootstrap/dist/css/bootstrap.css' rel='stylesheet')
     link(href='/css/index.css')
     body
       nav.navbar
-        div.container-fluid
+        div.container
+          p.navbar-text 
       block content
       div#footer footer
       script(type='text/javascript' src='/jquery/dist/jquery.js')

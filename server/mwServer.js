@@ -1,5 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+var i18n = require('i18n');
 
 var app = express();
 
@@ -8,6 +9,17 @@ app.set('view engine', 'jade');
 
 app.use(express.static('web'));
 app.use(express.static('node_modules'));
+
+i18n.configure({
+  locales:['en-US', 'zh-CN', 'ja-JP'],
+  defaultLocale: 'zh-CN',
+  directory: __dirname + '/locales',
+  updateFiles: false,
+  indent: '\t',
+  extension: '.js'
+});
+app.use(i18n.init);
+
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 

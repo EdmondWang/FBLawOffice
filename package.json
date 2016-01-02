@@ -33,6 +33,7 @@
     "coffee-script": "^1.10.0",
     "css-loader": "^0.22.0",
     "express": "^4.13.3",
+    "i18n": "^0.5.0",
     "jade": "^1.11.0",
     "jquery": "^2.1.4",
     "jsx-loader": "^0.13.2",
