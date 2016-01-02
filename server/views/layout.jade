@@ -6,12 +6,40 @@ html
     meta(name='viewport' content='width=device-width, initial-scale=1')
     title #{__('APP_TITLE')}
     link(href='/bootstrap/dist/css/bootstrap.css' rel='stylesheet')
-    link(href='/css/index.css')
+    link(href='/css/layout.css' rel='stylesheet')
     body
-      nav.navbar
+      div#app-top
         div.container
-          p.navbar-text 
+          div.row
+            div.col-sm-6.col-md-6.col-lg-6
+              div.app-logo
+            div.col-sm-6.col-md-6.col-lg-6
+              div.app-searchAndI18n
+                input
+      nav#app-nav
+        div.container
+          ul.app-menu
+            li.app-menu-item
+              a(href='#') #{__('MENU_OURROAD')}
+            li.app-menu-item
+              a(href='#') #{__('MENU_NEWS&DEALS')}
+            li.app-menu-item
+              a(href='#') #{__('MENU_OURPRACTICES')}
+            li.app-menu-item
+              a(href='#') #{__('MENU_OURPROFESSIONALS')}
+            li.app-menu-item
+              a(href='#') #{__('MENU_OURPUBLICATIONS')}
+            li.app-menu-item
+              a(href='#') #{__('MENU_OUROFFICES')}
+            li.app-menu-item
+              a(href='#') #{__('MENU_GLOBALREACH')}
+            li.app-menu-item
+              a(href='#') #{__('MENU_CAREERS')}
+            li.app-menu-item
+              a(href='#') #{__('MENU_CONTACTUS')}
+      div#app-middle
       block content
-      div#footer footer
+      div#app-bottom footer
       script(type='text/javascript' src='/jquery/dist/jquery.js')
       script(type='text/javascript' src='/bootstrap/dist/js/bootstrap.js')
+      script(type='text/javascript' src='/js/layout.js')

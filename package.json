@@ -4,7 +4,7 @@
   "description": "",
   "main": "server/server.js",
   "scripts": {
-    "data": "node server/mwServer.js",
+    "mw": "node server/mwServer.js",
     "web": "node server/staticServer.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,6 +22,7 @@
     "babel-preset-es2015": "^6.1.2",
     "babel-preset-react": "^6.1.2",
     "react-hot-loader": "^1.3.0",
+    "supervisor": "^0.9.1",
     "webpack-dev-server": "^1.12.1"
   },
   "dependencies": {
@@ -35,8 +36,11 @@
     "express": "^4.13.3",
     "i18n": "^0.5.0",
     "jade": "^1.11.0",
+    "jade-loader": "^0.8.0",
     "jquery": "^2.1.4",
     "jsx-loader": "^0.13.2",
+    "less": "^2.5.3",
+    "less-loader": "^2.2.2",
     "react": "^0.14.5",
     "react-dom": "^0.14.5",
     "style-loader": "^0.13.0",

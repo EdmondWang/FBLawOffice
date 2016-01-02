@@ -15,15 +15,19 @@ module.exports = {
     loaders: [
       {
         test: /\.coffee$/,
-        loader: 'coffee-loader'
+        loader: 'coffee'
+      },
+      {
+        test: /\.jade$/,
+        loader: 'jade'
       },
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
         loader: 'react-hot!babel?presets[]=es2015,presets[]=react',
       },
-      {test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'},
-      {test: /\.css$/, loader: 'style!css'}
+      {test: /\.(png|jpg)$/, loader: 'url?limit=8192'},
+      {test: /\.css$/, loader: 'style!css!less'}
     ]
   },
   plugins: [

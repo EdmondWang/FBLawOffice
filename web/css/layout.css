@@ -1,0 +1,55 @@
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.app-logo {
+  width: 270px;
+  height: 30px;
+  background-image: url('../img/logo.png');
+  background-size: 270px 30px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.app-searchAndI18n {
+  text-align: right;
+}
+
+/* app-menu starts */
+ul.app-menu {
+  display: table;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+li.app-menu-item {
+  text-align: center;
+  vertical-align: middle;
+  padding: 0;
+  margin: 0;
+  display: table-cell;
+}
+
+li.app-menu-item a:link {
+  font-weight: bold;
+  color: #000;
+}
+
+li.app-menu-item a:visited {
+  font-weight: bold;
+  color: #000;
+}
+
+li.app-menu-item a:hover {
+  font-weight: bold;
+  color: #A62B4D;
+  text-decoration: none;
+}
+
+li.app-menu-item a:active {
+  font-weight: bold;
+  color: #000;
+}
+/* app-menu ends */
