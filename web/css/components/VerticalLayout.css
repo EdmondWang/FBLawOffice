@@ -1,0 +1,10 @@
+.vl-container {
+  width: 100%;
+  height: auto;
+  overflow: auto;
+}
+
+.vl-item {
+  width: 100%;
+  display: block;
+}

@@ -1,12 +1,6 @@
 var React = require('react');
 var WebI18n = require('./WebI18n');
-
-var intlData = {
-    'locales': 'en-US',
-    'messages': {
-        'MENU_News&Deals': 'News and Deals'
-    }
-};
+var intlData = require('../locales/lang-zh-CN.js');
 
 var MidHeader = React.createClass({
   render : function() {
