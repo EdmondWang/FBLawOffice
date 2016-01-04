@@ -3,7 +3,7 @@ var $ = require('jquery');
 var css = require('../../css/components/VerticalLayout.css');
 
 var VerticalLayout = React.createClass({
-  render: function() {
+  render : function() {
     var items = null;
     if (!$.isArray(this.props.children)) {
       items = (<div>no vertical layout items</div>)
