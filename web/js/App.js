@@ -38,28 +38,28 @@ var App = React.createClass({
               <div className='col-sm-10 col-md-10 col-lg-10'>
                 <ul className='app-menu'>
                   <li className='app-menu-item'>
-                    <Link to='/road'>{intlData.messages.MENU_OurRoad}</Link>
+                    <Link to='road' activeClassName='active'>{intlData.messages.MENU_OurRoad}</Link>
                   </li>
                   <li className='app-menu-item'>
-                    <Link to='/road'>{intlData.messages.MENU_NewsAndDeals}</Link>
+                    <Link to='road' activeClassName='active'>{intlData.messages.MENU_NewsAndDeals}</Link>
                   </li>
                   <li className='app-menu-item'>
-                    <a href='/road'>{intlData.messages.MENU_OurPractices}</a>
+                    <Link to='road' activeClassName='active'>{intlData.messages.MENU_OurPractices}</Link>
                   </li>
                   <li className='app-menu-item'>
-                    <a href='/road'>{intlData.messages.MENU_OurProfessional}</a>
+                    <Link to='road' activeClassName='active'>{intlData.messages.MENU_OurProfessional}</Link>
                   </li>
                   <li className='app-menu-item'>
-                    <a href='/road'>{intlData.messages.MENU_OurPublications}</a>
+                    <Link to='road' activeClassName='active'>{intlData.messages.MENU_OurPublications}</Link>
                   </li>
                   <li className='app-menu-item'>
-                    <a href='/road'>{intlData.messages.MENU_OurOffices}</a>
+                    <Link to='road' activeClassName='active'>{intlData.messages.MENU_OurOffices}</Link>
                   </li>
                   <li className='app-menu-item'>
-                    <a href='/road'>{intlData.messages.MENU_GlobalReach}</a>
+                    <Link to='road' activeClassName='active'>{intlData.messages.MENU_GlobalReach}</Link>
                   </li>
                   <li className='app-menu-item'>
-                    <a href='/road'>{intlData.messages.MENU_ContactUs}</a>
+                    <Link to='road' activeClassName='active'>{intlData.messages.MENU_ContactUs}</Link>
                   </li>
                 </ul>
               </div>

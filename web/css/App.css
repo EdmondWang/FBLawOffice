@@ -70,6 +70,12 @@ li.app-menu-item a {
   text-decoration: none;
 }
 
+li.app-menu-item a.active {
+  font-weight: bold;
+  color: #A62B4D;
+  text-decoration: none;
+}
+
 li.app-menu-item a:visited {
   font-weight: bold;
   color: #555;
