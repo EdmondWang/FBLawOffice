@@ -41,25 +41,28 @@ var App = React.createClass({
                     <Link to='road' activeClassName='active'>{intlData.messages.MENU_OurRoad}</Link>
                   </li>
                   <li className='app-menu-item'>
-                    <Link to='road' activeClassName='active'>{intlData.messages.MENU_NewsAndDeals}</Link>
+                    <Link to='news' activeClassName='active'>{intlData.messages.MENU_NewsAndDeals}</Link>
                   </li>
                   <li className='app-menu-item'>
-                    <Link to='road' activeClassName='active'>{intlData.messages.MENU_OurPractices}</Link>
+                    <Link to='practices' activeClassName='active'>{intlData.messages.MENU_OurPractices}</Link>
                   </li>
                   <li className='app-menu-item'>
-                    <Link to='road' activeClassName='active'>{intlData.messages.MENU_OurProfessional}</Link>
+                    <Link to='professional' activeClassName='active'>{intlData.messages.MENU_OurProfessional}</Link>
                   </li>
                   <li className='app-menu-item'>
-                    <Link to='road' activeClassName='active'>{intlData.messages.MENU_OurPublications}</Link>
+                    <Link to='publications' activeClassName='active'>{intlData.messages.MENU_OurPublications}</Link>
                   </li>
                   <li className='app-menu-item'>
-                    <Link to='road' activeClassName='active'>{intlData.messages.MENU_OurOffices}</Link>
+                    <Link to='offices' activeClassName='active'>{intlData.messages.MENU_OurOffices}</Link>
                   </li>
                   <li className='app-menu-item'>
-                    <Link to='road' activeClassName='active'>{intlData.messages.MENU_GlobalReach}</Link>
+                    <Link to='globalreach' activeClassName='active'>{intlData.messages.MENU_GlobalReach}</Link>
                   </li>
                   <li className='app-menu-item'>
-                    <Link to='road' activeClassName='active'>{intlData.messages.MENU_ContactUs}</Link>
+                    <Link to='careers' activeClassName='active'>{intlData.messages.MENU_Careers}</Link>
+                  </li>
+                  <li className='app-menu-item'>
+                    <Link to='contactus' activeClassName='active'>{intlData.messages.MENU_ContactUs}</Link>
                   </li>
                 </ul>
               </div>
