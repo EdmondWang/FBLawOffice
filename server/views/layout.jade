@@ -13,7 +13,7 @@ html
           div.row
             div.col-sm-1.col-md-1.col-lg-1
             div.col-sm-5.col-md-5.col-lg-5
-              a(href='/')
+              a(href='/home')
                 img(src='/img/logo-fullName_250x40.png' alt='#{__("APP_Title")}')
             div.col-sm-5.col-md-5.col-lg-5
               div.app-searchAndLang
@@ -26,7 +26,7 @@ html
             div.col-sm-10.col-md-10.col-lg-10
               ul.app-menu
                 li.app-menu-item
-                  a(href='#') #{__('MENU_OurRoad')}
+                  a(href='/road') #{__('MENU_OurRoad')}
                 li.app-menu-item
                   a(href='#') #{__('MENU_News&Deals')}
                 li.app-menu-item
@@ -45,7 +45,13 @@ html
                   a(href='#') #{__('MENU_ContactUs')}
             div.col-sm-1.col-md-1.col-lg-1
       div#app-middle
-        block content
+        div.container-fluid
+          div.row
+            div.col-sm-1.col-md-1.col-lg-1
+            div.col-sm-10.col-md-10.col-lg-10
+              div#content
+              block content
+            div.col-sm-1.col-md-1.col-lg-1
       div#app-bottom
         div.container-fluid
           div.col-sm-1.col-md-1.col-lg-1

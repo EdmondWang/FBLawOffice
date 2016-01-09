@@ -79,6 +79,10 @@ li.app-menu-item a:active {
 }
 /* app-menu ends */
 
+.midHeader {
+  height: 33px;
+}
+
 #app-bottom {
   font-size: 12px;
   padding-top: 10px;
