@@ -4,8 +4,3 @@
   display: table;
   overflow: auto;
 }
-
-.vl-item {
-  width: 100%;
-  display: table-row;
-}
