@@ -39,7 +39,7 @@ module.exports = {
     })
   ],
   resolve: {
-    root: [process.cwd() + '/app', process.cwd() + '/node_modules'],
-    extensions: ['', '.js', '.json', '.coffee']
+    root: [process.cwd() + '/web', process.cwd() + '/node_modules'],
+    extensions: ['', '.js', '.json', '.coffee', '.css']
   }
 }

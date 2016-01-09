@@ -11,7 +11,9 @@
             $nav = $('#app-nav'),
             $mid = $('#app-middle'),
             $bottom = $('#app-bottom');
-          $mid.css('height', $('body').height() - $top.outerHeight() - $nav.outerHeight() - $bottom.outerHeight());
+          var newHeight = $('body').height() - $top.outerHeight() - $nav.outerHeight() - $bottom.outerHeight();
+          $mid.css('height', newHeight);
+          $('#content').css('height', newHeight);
         }
         $(window).resize(function() {
           clearTimeout(resizeTimer);

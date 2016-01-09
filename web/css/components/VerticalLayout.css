@@ -1,10 +1,11 @@
 .vl-container {
   width: 100%;
-  height: auto;
+  height: 100%;
+  display: table;
   overflow: auto;
 }
 
 .vl-item {
   width: 100%;
-  display: block;
+  display: table-row;
 }
