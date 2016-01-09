@@ -12,12 +12,7 @@ var VerticalLayout = React.createClass({
   },
 
   render : function() {
-    var items = null;
-    if (!Array.isArray(this.props.children)) {
-      items = (<VerticalLayoutItem>no vertical layout items</VerticalLayoutItem>)
-    } else {
-      items = this.renderChildren();
-    }
+    var items = this.renderChildren();
     return (
       <div className='vl-container'>
         {items}

@@ -27,7 +27,12 @@ module.exports = {
         loader: 'react-hot!babel?presets[]=es2015,presets[]=react',
       },
       {test: /\.(png|jpg)$/, loader: 'url?limit=8192'},
-      {test: /\.css$/, loader: 'style!css!less'}
+      {test: /\.css$/, loader: 'style!css!less'},
+      {test: /\.eot/,loader : 'file?prefix=font/'},
+      {test: /\.woff/,loader : 'file?prefix=font/&limit=10000&mimetype=application/font-woff'},
+      {test: /\.ttf/, loader : 'file?prefix=font/'},
+      {test: /\.svg/, loader : 'file?prefix=font/'},
+      {test: /\.otf/, loader : 'file?prefix=font/'},
     ]
   },
   plugins: [

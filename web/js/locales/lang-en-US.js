@@ -1,7 +1,7 @@
 var intlData = {
   'locales': 'en-US',
   'messages': {
-    'MENU_News&Deals': 'News and Deals'
+    'MENU_NewsAndDeals': 'News and Deals'
   }
 };
 

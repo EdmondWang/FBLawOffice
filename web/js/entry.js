@@ -1,18 +1,16 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var VerticalLayout = require('./components/VerticalLayout.js');
-var VerticalLayoutItem = require('./components/VerticalLayoutItem.js');
-var ScrollableNav = require('./components/ScrollableNav.js');
-var MidHeader = require('./components/MidHeader.js');
+import { Router, Route, Link, browserHistory } from 'react-router';
+var App = require('./App.js');
+var HomePage = require('./pages/HomePage.js');
+var RoadPage = require('./pages/RoadPage.js');
 
 ReactDOM.render(
-  <VerticalLayout>
-    <VerticalLayoutItem cssClass='midHeader'>
-      <MidHeader headerI18nKey={'MENU_News&Deals'} />
-    </VerticalLayoutItem>
-    <VerticalLayoutItem>
-      <ScrollableNav />
-    </VerticalLayoutItem>
-  </VerticalLayout>,
-  document.getElementById('content')
+  <Router history={browserHistory}>
+    <Route path='/' component={App}>
+      <Route path='home' component={HomePage} />
+      <Route path='road' component={RoadPage} />
+    </Route>
+  </Router>,
+  document.getElementById('app')
 );
