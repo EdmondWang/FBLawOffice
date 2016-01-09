@@ -34,12 +34,13 @@ var ScrollableNav = React.createClass({
   render : function() {
     var navs = null,
       navNames = [],
-      navContents = [];
+      navContents = [],
+      that = this;
     if (!$.isArray(this.state.navs)) {
       return;
     }
     navs = this.state.navs.map(function(nav, index){
-      navNames.push(<div className='sn-navName' key={index}>{nav.name}</div>);
+      navNames.push(<div className='sn-navName' key={index} onClick={that.handleClickNav}>{nav.name}</div>);
       navContents.push(<div className='sn-navContent' key={index}>{nav.content}</div>);
     });
     return (
@@ -52,6 +53,10 @@ var ScrollableNav = React.createClass({
         </div>
       </div>
     );
+  },
+
+  handleClickNav : function() {
+
   }
 });
 

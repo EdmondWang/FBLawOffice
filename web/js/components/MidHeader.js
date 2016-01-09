@@ -5,7 +5,7 @@ var intlData = require('../locales/lang-zh-CN.js');
 var MidHeader = React.createClass({
   render : function() {
     return (
-      <div>
+      <div className='midHeader'>
         <h2>
           <WebI18n {...intlData} webI18nKey={this.props.headerI18nKey} />
         </h2>
