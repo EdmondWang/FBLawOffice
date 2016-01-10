@@ -29,6 +29,12 @@ var ScrollableNav = React.createClass({
         }
       ]
     });
+    // $('.sn-navContent').ready(function() {
+    //   var listHeight = $('.sn-navContentList').height();
+    //   $('.sn-navContent').each(function(index, navContent){
+    //     $(navContent).css({left: 0, top: (listHeight * index) + 'px'});
+    //   });
+    // });
   },
 
   render : function() {
@@ -36,20 +42,31 @@ var ScrollableNav = React.createClass({
       navNames = [],
       navContents = [],
       that = this;
-    if (!$.isArray(this.state.navs)) {
+    if (!Array.isArray(this.state.navs)) {
       return;
     }
+    this.curIndex = 0;
     navs = this.state.navs.map(function(nav, index){
       navNames.push(<div className='sn-navName' key={index} onClick={that.handleClickNav} data-index={index}>{nav.name}</div>);
-      navContents.push(<div id={'sn-nav-' + index} className='sn-navContent' key={index}>{nav.content}</div>);
+      navContents.push(
+        <div
+          id={'sn-navContent-' + index}
+          className='sn-navContent'
+          key={index}
+          data-index={index}>
+          {nav.content}
+        </div>
+      );
     });
     return (
       <div className='sn-container'>
         <div className='sn-navNameBar'>
           {navNames}
         </div>
-        <div className='sn-navContentList'>
-          {navContents}
+        <div className='sn-viewport' ref='navViewport'>
+          <div className='sn-navContentList' ref='navContentList'>
+            {navContents}
+          </div>
         </div>
       </div>
     );
@@ -59,8 +76,12 @@ var ScrollableNav = React.createClass({
     event.stopPropagation();
     event.preventDefault();
     var index = $(event.target).data('index'),
-      $navContent = $('sn-nav-' + index);
-    console.log($navContent);
+      $navContentList = $(this.refs.navContentList),
+      navViewport = this.refs.navViewport;
+    if (index == this.curIndex) {
+      return;
+    }
+    $navContentList.animate({'top': index * navViewport.offsetHeight + 'px'}, 500);
   }
 });
 

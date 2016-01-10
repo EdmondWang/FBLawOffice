@@ -4,6 +4,10 @@ var css = require('../../css/components/VerticalLayoutItem.css');
 
 var VerticalLayoutItem = React.createClass({
 
+  componentDidMount : function() {
+
+  },
+
   render : function() {
     var classStr = 'vl-item ';
     if (this.props.cssClass) {
