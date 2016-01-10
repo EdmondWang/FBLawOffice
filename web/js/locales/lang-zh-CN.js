@@ -16,6 +16,7 @@ var intlData = {
     "BOTTOM_Rights": "©方本律师事务所版权所有 苏ICP备11033038号",
     "BOTTOM_SiteMap": "Site Map",
     "BOTTOM_LegalDeclaration": "法律声明"
+
   }
 };
 

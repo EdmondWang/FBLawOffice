@@ -31,8 +31,8 @@ app.get('/', function(req, res) {
 var comments = require('./routers/comments');
 app.use('/comments', comments);
 
-// var home = require('./routers/home');
-// app.use('/home', home);
+var home = require('./routers/home');
+app.use('/home', home);
 //
 // var road = require('./routers/home');
 // app.use('/road', road);
