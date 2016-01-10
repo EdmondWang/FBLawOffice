@@ -29,12 +29,6 @@ var ScrollableNav = React.createClass({
         }
       ]
     });
-    // $('.sn-navContent').ready(function() {
-    //   var listHeight = $('.sn-navContentList').height();
-    //   $('.sn-navContent').each(function(index, navContent){
-    //     $(navContent).css({left: 0, top: (listHeight * index) + 'px'});
-    //   });
-    // });
   },
 
   render : function() {
@@ -81,7 +75,8 @@ var ScrollableNav = React.createClass({
     if (index == this.curIndex) {
       return;
     }
-    $navContentList.animate({'top': index * navViewport.offsetHeight + 'px'}, 500);
+    $navContentList.animate({'top': '-' + index * navViewport.offsetHeight + 'px'}, 500);
+    this.curIndex = index;
   }
 });
 

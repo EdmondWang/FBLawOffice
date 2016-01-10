@@ -10,6 +10,11 @@
   width: 20%;
 }
 
+.sn-navName:hover {
+  color: #A62B4D;
+  cursor: pointer;
+}
+
 .sn-viewport {
   width: 80%;
   height: 100%;
