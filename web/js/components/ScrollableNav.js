@@ -1,6 +1,7 @@
 var React = require('react');
 var $ = require('jquery');
 var css = require('../../css/components/ScrollableNav.css');
+var ScrollableNavItem = require('./ScrollableNavItem.js');
 
 var ScrollableNav = React.createClass({
 
@@ -16,19 +17,7 @@ var ScrollableNav = React.createClass({
   },
 
   componentDidMount : function() {
-    // TODO,replace by send AJAXJ
-    this.setState({
-      navs: [
-        {
-          'name': 'Hermes',
-          'content': 'Hermes is a good place'
-        },
-        {
-          'name': 'Diro',
-          'content': 'enjoy your life now, oy h'
-        }
-      ]
-    });
+
   },
 
   render : function() {
@@ -40,18 +29,20 @@ var ScrollableNav = React.createClass({
       return;
     }
     this.curIndex = 0;
-    navs = this.state.navs.map(function(nav, index){
-      navNames.push(<div className='sn-navName' key={index} onClick={that.handleClickNav} data-index={index}>{nav.name}</div>);
+
+    this.props.children.map(function(child, index) {
+      navNames.push(<div className='sn-navName' key={index} onClick={that.handleClickNav} data-index={index}>{child.props.name}</div>);
       navContents.push(
         <div
           id={'sn-navContent-' + index}
           className='sn-navContent'
           key={index}
           data-index={index}>
-          {nav.content}
+          {child.props.children}
         </div>
       );
     });
+
     return (
       <div className='sn-container'>
         <div className='sn-navNameBar'>

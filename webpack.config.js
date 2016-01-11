@@ -2,13 +2,14 @@ var webpack = require("webpack");
 
 module.exports = {
   entry: [
-    'webpack-dev-server/client?http://127.0.0.1:3001', // WebpackDevServer host and port
-    'webpack/hot/only-dev-server',
+    // 'webpack-dev-server/client?http://127.0.0.0:3001', // WebpackDevServer host and port
+    // 'webpack/hot/only-dev-server',
     __dirname + '/web/js/entry' // Your appʼs entry point
   ],
   output: {
+    crossOriginLoading: true,
     path: __dirname +'/build',
-    publicPath: 'http://127.0.0.1:3001/web/',
+    publicPath: 'http://localhost:3000/web/',
     filename: 'bundle.js', // '[hash:8].[name].min.js'
   },
   module: {
@@ -24,7 +25,8 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
-        loader: 'react-hot!babel?presets[]=es2015,presets[]=react',
+        // loader: 'react-hot!babel?presets[]=es2015,presets[]=react',
+        loader: 'babel?presets[]=es2015,presets[]=react',
       },
       {test: /\.(png|jpg)$/, loader: 'url?limit=8192'},
       {test: /\.css$/, loader: 'style!css!less'},
@@ -36,7 +38,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
+    // new webpack.HotModuleReplacementPlugin(),
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery",
