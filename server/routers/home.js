@@ -6,4 +6,8 @@ router.get('/overview', function(req, res) {
   res.send(json);
 });
 
+router.get('/socialResponsibility', function(req, res) {
+  var json = require('../jsons/zh-CN/socialResponsibility.json');
+  res.send(json);
+})
 module.exports = router;

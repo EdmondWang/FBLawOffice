@@ -5,17 +5,6 @@ var ScrollableNavItem = require('./ScrollableNavItem.js');
 
 var ScrollableNav = React.createClass({
 
-  /**
-  * state.navs = [
-  *   {name: 'string', content: [html]}
-  * }
-  */
-  getInitialState : function() {
-    return {
-      navs : []
-    }
-  },
-
   componentDidMount : function() {
 
   },
@@ -25,12 +14,12 @@ var ScrollableNav = React.createClass({
       navNames = [],
       navContents = [],
       that = this;
-    if (!Array.isArray(this.state.navs)) {
-      return;
-    }
-    this.curIndex = 0;
 
-    this.props.children.map(function(child, index) {
+    this.curIndex = 0;
+    React.Children.map(this.props.children, function(child, index) {
+      if (child.type.displayName != 'ScrollableNavItem') {
+        return child;
+      }
       navNames.push(<div className='sn-navName' key={index} onClick={that.handleClickNav} data-index={index}>{child.props.name}</div>);
       navContents.push(
         <div
