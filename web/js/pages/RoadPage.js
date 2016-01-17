@@ -10,6 +10,7 @@ var Section = require('../components/Section.js');
 var SectionTitle = require('../components/SectionTitle.js');
 var SectionContent = require('../components/SectionContent.js');
 var Paragraph = require('../components/Paragraph.js');
+var TabStrip = require('../components/TabStrip.js');
 
 var RoadPage = React.createClass({
   render : function() {
@@ -35,10 +36,19 @@ var RoadPage = React.createClass({
               <div>....sj3</div>
             </ScrollableNavItem>
             <ScrollableNavItem name={intlData.messages.NAV_Reputation}>
-              <div>....sj4</div>
+              <TabStrip items={['2016', '2015', '2016']} contents={
+                [<Paragraph source={contextPath + 'home/socialResponsibility'} />,
+                <Paragraph source={contextPath + 'home/overview'} />
+              ]}>
+              </TabStrip>
             </ScrollableNavItem>
             <ScrollableNavItem name={intlData.messages.NAV_SocialResponsibility}>
-              <Paragraph source={contextPath + 'home/socialResponsibility'} />
+              <Section>
+                <SectionTitle text={intlData.messages.NAV_SocialResponsibility} />
+                <SectionContent>
+                  <Paragraph source={contextPath + 'home/socialResponsibility'} />
+                </SectionContent>
+              </Section>
             </ScrollableNavItem>
           </ScrollableNav>
         </VerticalLayoutItem>
