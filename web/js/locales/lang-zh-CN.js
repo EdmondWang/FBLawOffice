@@ -20,6 +20,7 @@ var intlData = {
     "NAV_SocialResponsibility": "社会责任",
 
     "TEXT_Fangben_LawOffice": "方本律师事务所",
+    "TEXT_Fangben_MILESTONE": "方本大事",
 
     "BOTTOM_Rights": "©方本律师事务所版权所有 苏ICP备11033038号",
     "BOTTOM_SiteMap": "Site Map",
