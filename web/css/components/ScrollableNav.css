@@ -15,6 +15,10 @@
   cursor: pointer;
 }
 
+.sn-navName.current {
+  color: #A62B4D;
+}
+
 .sn-viewport {
   width: 80%;
   height: 100%;

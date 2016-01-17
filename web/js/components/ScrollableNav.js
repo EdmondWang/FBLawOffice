@@ -34,7 +34,7 @@ var ScrollableNav = React.createClass({
 
     return (
       <div className='sn-container'>
-        <div className='sn-navNameBar'>
+        <div className='sn-navNameBar' ref='navNameBar'>
           {navNames}
         </div>
         <div className='sn-viewport' ref='navViewport'>
@@ -47,14 +47,17 @@ var ScrollableNav = React.createClass({
   },
 
   handleClickNav : function(event) {
-    event.stopPropagation();
-    event.preventDefault();
-    var index = $(event.target).data('index'),
-      $navContentList = $(this.refs.navContentList),
-      navViewport = this.refs.navViewport;
     if (index == this.curIndex) {
       return;
     }
+    event.stopPropagation();
+    event.preventDefault();
+    var $navName = $(event.target),
+      index = $navName.data('index'),
+      $navContentList = $(this.refs.navContentList),
+      navViewport = this.refs.navViewport;
+    $('.sn-navName', this.refs.navNameBar).removeClass('current');
+    $navName.addClass('current');
     $navContentList.animate({'top': '-' + index * navViewport.offsetHeight + 'px'}, 500);
     this.curIndex = index;
   }

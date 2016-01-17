@@ -50,14 +50,29 @@ var TabStrip = React.createClass({
     if (this.curIndex == index) {
       return;
     }
-    var $currentItemTitle = $('#ts-title' + this.curIndex, this.refs.container),
-      $currentItemContent = $('#ts-content-item' + this.curIndex, this.refs.content),
-      $displayItemTitle = $('#ts-title' + index, this.refs.container),
-      $displayItemContent = $('#ts-content-item' + index, this.refs.content),
-      that = this;
 
-    $currentItemTitle.removeClass('current');
-    $currentItemContent.removeClass('fadeIn').addClass('fadeOut');
+    var $itemContents = $(this.refs.content).children(),
+      $currentItemTitle = $('#ts-title' + this.curIndex, this.refs.container),
+      $currentItemContent = null,
+      $displayItemTitle = $('#ts-title' + index, this.refs.container),
+      $displayItemContent = null,
+      that = this;
+    $.each($itemContents, function(k, itemContent){
+      if (itemContent.id == 'ts-content-item' + that.curIndex) {
+        $currentItemContent = $(itemContent);
+      }
+      if (itemContent.id == 'ts-content-item' + index) {
+        $displayItemContent = $(itemContent);
+      }
+    });
+    if ($currentItemContent == null && $displayItemContent == null) {
+      return false;
+    }
+    if ($currentItemContent != null) {
+      $currentItemTitle.removeClass('current');
+      $currentItemContent.removeClass('fadeIn').addClass('fadeOut');
+    }
+
     setTimeout(function(){
       $displayItemContent.removeClass('fadeOut').addClass('fadeIn');
       $displayItemTitle.addClass('current');

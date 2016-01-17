@@ -34,6 +34,9 @@ app.use('/comments', comments);
 
 var home = require('./routers/home');
 app.use('/home', home);
+
+var road = require('./routers/road');
+app.use('/road', road);
 //
 // var road = require('./routers/home');
 // app.use('/road', road);
