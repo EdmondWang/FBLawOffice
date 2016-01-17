@@ -12,77 +12,79 @@ var SectionContent = require('../components/SectionContent.js');
 var Paragraph = require('../components/Paragraph.js');
 var TabStrip = require('../components/TabStrip.js');
 var ContentList = require('../components/ContentList.js');
-var ModalContainer = require('../components/ModalContainer.js');
+var Modal = require('../components/Modal.js');
 
 var RoadPage = React.createClass({
 
   handleClickInterviewRow : function(rowData) {
-    rowData.detail;
     this.refs.modal.setState({
-      'isShowingModal': true
+      'isShowingModal': true,
+      'source': contextPath + rowData.detail
     });;
   },
 
   render : function() {
     var that = this;
     return (
-      <VerticalLayout>
-        <ModalContainer ref='modal'>
-        </ModalContainer>
-        <VerticalLayoutItem cssClass='midHeader'>
-          <MidHeader headerI18nKey={'MENU_OurRoad'} />
-        </VerticalLayoutItem>
-        <VerticalLayoutItem>
-          <ScrollableNav>
-            <ScrollableNavItem name={intlData.messages.NAV_OverView}>
-              <Section>
-                <SectionTitle text={intlData.messages.NAV_OverView} />
-                <SectionContent>
+      <div className='page'>
+        <Modal ref='modal'>
+        </Modal>
+        <VerticalLayout>
+          <VerticalLayoutItem cssClass='midHeader'>
+            <MidHeader headerI18nKey={'MENU_OurRoad'} />
+          </VerticalLayoutItem>
+          <VerticalLayoutItem>
+            <ScrollableNav>
+              <ScrollableNavItem name={intlData.messages.NAV_OverView}>
+                <Section>
+                  <SectionTitle text={intlData.messages.NAV_OverView} />
+                  <SectionContent>
+                    <Paragraph source={contextPath + 'road/overview'} />
+                  </SectionContent>
+                </Section>
+              </ScrollableNavItem>
+              <ScrollableNavItem name={intlData.messages.NAV_Vision}>
+                <div>....sj2</div>
+              </ScrollableNavItem>
+              <ScrollableNavItem name={intlData.messages.NAV_History}>
+                <TabStrip
+                  items={[
+                    intlData.messages.TEXT_Fangben_MileStone,
+                    intlData.messages.TEXT_LawOfficeInterview,
+                    intlData.messages.TEXT_CorporationInterview]}
+                  contents={[
+                    <TabStrip
+                      items={['2016', '2015', '2014', '2013', '2012', '2011']}
+                      contents={[
+                        <ContentList source={contextPath + 'road/milestones/2016'} />,
+                        <ContentList source={contextPath + 'road/milestones/2015'} />,
+                        <ContentList source={contextPath + 'road/milestones/2014'} />
+                      ]}>
+                    </TabStrip>,
+                    <ContentList source={contextPath + 'road/lawOffice-interview'} handleClickRow={that.handleClickInterviewRow} />
+                  ]}>
+                </TabStrip>
+              </ScrollableNavItem>
+              <ScrollableNavItem name={intlData.messages.NAV_Reputation}>
+                <TabStrip
+                  items={['2016', '2015', '2014']} contents={
+                  [<Paragraph source={contextPath + 'road/socialResponsibility'} />,
                   <Paragraph source={contextPath + 'road/overview'} />
-                </SectionContent>
-              </Section>
-            </ScrollableNavItem>
-            <ScrollableNavItem name={intlData.messages.NAV_Vision}>
-              <div>....sj2</div>
-            </ScrollableNavItem>
-            <ScrollableNavItem name={intlData.messages.NAV_History}>
-              <TabStrip
-                items={[
-                  intlData.messages.TEXT_Fangben_MileStone,
-                  intlData.messages.TEXT_LawOfficeInterview,
-                  intlData.messages.TEXT_CorporationInterview]}
-                contents={[
-                  <TabStrip
-                    items={['2016', '2015', '2014', '2013', '2012', '2011']}
-                    contents={[
-                      <ContentList source={contextPath + 'road/milestones/2016'} />,
-                      <ContentList source={contextPath + 'road/milestones/2015'} />,
-                      <ContentList source={contextPath + 'road/milestones/2014'} />
-                    ]}>
-                  </TabStrip>,
-                  <ContentList source={contextPath + 'road/lawOffice-interview'} handleClickRow={that.handleClickInterviewRow} />
                 ]}>
-              </TabStrip>
-            </ScrollableNavItem>
-            <ScrollableNavItem name={intlData.messages.NAV_Reputation}>
-              <TabStrip
-                items={['2016', '2015', '2014']} contents={
-                [<Paragraph source={contextPath + 'road/socialResponsibility'} />,
-                <Paragraph source={contextPath + 'road/overview'} />
-              ]}>
-              </TabStrip>
-            </ScrollableNavItem>
-            <ScrollableNavItem name={intlData.messages.NAV_SocialResponsibility}>
-              <Section>
-                <SectionTitle text={intlData.messages.NAV_SocialResponsibility} />
-                <SectionContent>
-                  <Paragraph source={contextPath + 'road/socialResponsibility'} />
-                </SectionContent>
-              </Section>
-            </ScrollableNavItem>
-          </ScrollableNav>
-        </VerticalLayoutItem>
-      </VerticalLayout>
+                </TabStrip>
+              </ScrollableNavItem>
+              <ScrollableNavItem name={intlData.messages.NAV_SocialResponsibility}>
+                <Section>
+                  <SectionTitle text={intlData.messages.NAV_SocialResponsibility} />
+                  <SectionContent>
+                    <Paragraph source={contextPath + 'road/socialResponsibility'} />
+                  </SectionContent>
+                </Section>
+              </ScrollableNavItem>
+            </ScrollableNav>
+          </VerticalLayoutItem>
+        </VerticalLayout>
+      </div>
     );
   }
 

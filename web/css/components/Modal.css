@@ -1,0 +1,66 @@
+.m-container {
+
+}
+
+.m-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  z-index: -1000;
+}
+
+.m-overlay.available {
+  display: block;
+  z-index: 1000;
+}
+
+.m-outer {
+  width: 1000px;
+  height: auto;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+}
+
+.m-innner {
+  float: left;
+}
+
+.m-header {
+  width: 100%;
+}
+
+.m-title {
+  position: relative;
+  font-size: 20px;
+  font-family: Arial, 微软雅黑;
+  letter-spacing: 1px;
+  color: rgb(166, 43, 77);
+  width: 1060px;
+  font-weight: bold;
+}
+
+.m-line-horiz {
+  position: relative;
+  float: left;
+  width: 1060px;
+  height: 1px;
+  background: url(/img/line_horiz.png);
+  margin: 15px 0;
+}
+
+.m-close {
+  background: url('/img/close_btn.png') center center no-repeat;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  z-index: 99999;
+}
