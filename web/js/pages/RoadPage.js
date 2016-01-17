@@ -34,9 +34,12 @@ var RoadPage = React.createClass({
             </ScrollableNavItem>
             <ScrollableNavItem name={intlData.messages.NAV_History}>
               <TabStrip
-                items={[intlData.messages.TEXT_Fangben_MileStone]}
-                contents={[<TabStrip items={[]} contents=[]></TabStrip>]}
-              >
+                items={[intlData.messages.TEXT_Fangben_MileStone, intlData.messages.TEXT_LawOfficeInterview, intlData.messages.TEXT_CorporationInterview]}
+                contents={[<TabStrip
+                  items={['2016', '2015', '2014', '2013', '2012', '2011']}
+                  contents={[]}>
+                  </TabStrip>
+                ]}>
               </TabStrip>
             </ScrollableNavItem>
             <ScrollableNavItem name={intlData.messages.NAV_Reputation}>

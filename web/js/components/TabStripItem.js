@@ -15,7 +15,7 @@ var TabStripItem = React.createClass({
 
   render : function() {
     return (
-      <li className='ts-title' onClick={this.props.onTabTitleClick}>{this.props.title}</li>
+      <li id={'ts-title' + this.props.index} className='ts-title' onClick={this.props.onTabTitleClick}>{this.props.title}</li>
     );
   },
 

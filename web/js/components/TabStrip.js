@@ -7,9 +7,7 @@ var TabStripItem = require('../components/TabStripItem.js');
 var TabStrip = React.createClass({
 
   componentDidMount : function() {
-    var $content = $(this.refs.content),
-      $firstContentItem = $('#ts-content-item0', $content);
-    $firstContentItem.addClass('fadeIn');
+    this.selectTab(0);
   },
 
   componentWillUnmount : function() {
@@ -19,7 +17,7 @@ var TabStrip = React.createClass({
   render : function() {
     var that = this,
       contents = [];
-    this.curIndex = 0;
+    this.curIndex = -1; // init
     var titles = React.Children.map(this.props.items, function(itemTitle, index) {
       var itemContent = that.props.contents[index],
         content = (<div
@@ -37,7 +35,7 @@ var TabStrip = React.createClass({
       </TabStripItem>)
     });
     return (
-      <div className='ts-container'>
+      <div className='ts-container' ref='container'>
         <ul className='ts-titleBar' ref='titleBar'>
           {titles}
         </ul>
@@ -48,18 +46,27 @@ var TabStrip = React.createClass({
     );
   },
 
-  handleClickOnTabTitle : function(index) {
+  selectTab :function(index) {
     if (this.curIndex == index) {
       return;
     }
-    var $displayItemContent = $('#ts-content-item' + index, this.refs.content),
+    var $currentItemTitle = $('#ts-title' + this.curIndex, this.refs.container),
       $currentItemContent = $('#ts-content-item' + this.curIndex, this.refs.content),
+      $displayItemTitle = $('#ts-title' + index, this.refs.container),
+      $displayItemContent = $('#ts-content-item' + index, this.refs.content),
       that = this;
+
+    $currentItemTitle.removeClass('current');
     $currentItemContent.removeClass('fadeIn').addClass('fadeOut');
     setTimeout(function(){
       $displayItemContent.removeClass('fadeOut').addClass('fadeIn');
+      $displayItemTitle.addClass('current');
       that.curIndex = index;
     }, 100);
+  },
+
+  handleClickOnTabTitle : function(index) {
+    this.selectTab(index);
   }
 });
 
