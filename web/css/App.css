@@ -3,7 +3,6 @@ html {
   min-width: 1000px;
   height: 100%;
   overflow: hidden;
-  overflow-x: auto;
 }
 
 @font-face {
@@ -26,6 +25,7 @@ body {
   font-family: 'Antenna-Light';
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 #full-screen-background-image {

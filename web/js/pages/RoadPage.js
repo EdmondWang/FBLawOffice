@@ -12,11 +12,23 @@ var SectionContent = require('../components/SectionContent.js');
 var Paragraph = require('../components/Paragraph.js');
 var TabStrip = require('../components/TabStrip.js');
 var ContentList = require('../components/ContentList.js');
+var ModalContainer = require('../components/ModalContainer.js');
 
 var RoadPage = React.createClass({
+
+  handleClickInterviewRow : function(rowData) {
+    rowData.detail;
+    this.refs.modal.setState({
+      'isShowingModal': true
+    });;
+  },
+
   render : function() {
+    var that = this;
     return (
       <VerticalLayout>
+        <ModalContainer ref='modal'>
+        </ModalContainer>
         <VerticalLayoutItem cssClass='midHeader'>
           <MidHeader headerI18nKey={'MENU_OurRoad'} />
         </VerticalLayoutItem>
@@ -48,13 +60,13 @@ var RoadPage = React.createClass({
                       <ContentList source={contextPath + 'road/milestones/2014'} />
                     ]}>
                   </TabStrip>,
-                  <ContentList source={contextPath + 'road/lawOffice-interview'} />
+                  <ContentList source={contextPath + 'road/lawOffice-interview'} handleClickRow={that.handleClickInterviewRow} />
                 ]}>
               </TabStrip>
             </ScrollableNavItem>
             <ScrollableNavItem name={intlData.messages.NAV_Reputation}>
               <TabStrip
-                items={['2016', '2015', '2016']} contents={
+                items={['2016', '2015', '2014']} contents={
                 [<Paragraph source={contextPath + 'road/socialResponsibility'} />,
                 <Paragraph source={contextPath + 'road/overview'} />
               ]}>
@@ -73,6 +85,7 @@ var RoadPage = React.createClass({
       </VerticalLayout>
     );
   }
+
 });
 
 module.exports = RoadPage;

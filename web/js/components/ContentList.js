@@ -40,12 +40,31 @@ var ContentList = React.createClass({
     this.getSource();
   },
 
+  handleClickRow : function(event){
+    event.stopPropagation();
+    event.preventDefault();
+    var $target = $(event.target),
+      rowData = null;
+    if ($target.data('row')) {
+      rowData = $target.data('row');
+    } else {
+      rowData = $target.parent().data('row');
+    }
+
+    if (this.props.handleClickRow && $.isFunction(this.props.handleClickRow)) {
+      this.props.handleClickRow.call(this, rowData);
+    }
+  },
+
   render : function() {
+    var that = this;
     var rows = this.state.data.map(function(row, index){
-      var result = [];
-      result.push(<div className='cl-text'>{row.text}</div>);
-      result.push(<div className='cl-comment'>{row.comment}</div>);
-      return result;
+      return (
+        <div key={index} className='cl-row' data-row={JSON.stringify(row)} onClick={that.handleClickRow}>
+          <div className='cl-text'>{row.text}</div>
+          <div className='cl-comment'>{row.comment}</div>
+        </div>
+      )
     });
     return (
       <div className='cl-container'>

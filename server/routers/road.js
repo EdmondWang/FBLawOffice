@@ -22,4 +22,9 @@ router.get('/lawOffice-interview', function(req, res) {
   res.send(json);
 });
 
+router.get('/articles/:id', function(){
+  var json = require('../jsons/zh-CN/articles.json');
+  res.send();
+});
+
 module.exports = router;
