@@ -59,7 +59,7 @@ var TabStrip = React.createClass({
     setTimeout(function(){
       $displayItemContent.removeClass('fadeOut').addClass('fadeIn');
       that.curIndex = index;
-    }, 500);
+    }, 100);
   }
 });
 
