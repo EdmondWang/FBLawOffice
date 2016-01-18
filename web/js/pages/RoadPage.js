@@ -41,6 +41,9 @@ var RoadPage = React.createClass({
     const customModalStyles = {
       overlay : {
         backgroundColor : 'rgba(0,0,0,0.5)'
+      },
+      content : {
+
       }
     };
     return (
