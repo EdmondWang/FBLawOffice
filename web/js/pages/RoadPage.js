@@ -12,22 +12,43 @@ var SectionContent = require('../components/SectionContent.js');
 var Paragraph = require('../components/Paragraph.js');
 var TabStrip = require('../components/TabStrip.js');
 var ContentList = require('../components/ContentList.js');
-var Modal = require('../components/Modal.js');
+var Modal = require('react-modal');
 
 var RoadPage = React.createClass({
 
+  getDefaultProps : function() {
+
+  },
+
+  getInitialState : function() {
+    return { modalIsOpen: false };
+  },
+
+  openModal: function() {
+    this.setState({modalIsOpen: true});
+  },
+
+  closeModal: function() {
+    this.setState({modalIsOpen: false});
+  },
+
   handleClickInterviewRow : function(rowData) {
-    this.refs.modal.setState({
-      'isShowingModal': true,
-      'source': contextPath + rowData.detail
-    });;
+    this.openModal();
   },
 
   render : function() {
     var that = this;
+    const customModalStyles = {
+      overlay : {
+        backgroundColor : 'rgba(0,0,0,0.5)'
+      }
+    };
     return (
       <div className='page'>
-        <Modal ref='modal'>
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          onRequestClose={this.closeModal}
+          style={customModalStyles}>
         </Modal>
         <VerticalLayout>
           <VerticalLayoutItem cssClass='midHeader'>
