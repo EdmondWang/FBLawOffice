@@ -12,46 +12,37 @@ var SectionContent = require('../components/SectionContent.js');
 var Paragraph = require('../components/Paragraph.js');
 var TabStrip = require('../components/TabStrip.js');
 var ContentList = require('../components/ContentList.js');
-var Modal = require('react-modal');
+var Modal = require('../components/Modal.js');
 
 var RoadPage = React.createClass({
 
-  getDefaultProps : function() {
+  getDefaultProps: function() {
 
   },
-
-  getInitialState : function() {
-    return { modalIsOpen: false };
-  },
-
   openModal: function() {
-    this.setState({modalIsOpen: true});
+    this.refs.modal.open();
   },
-
   closeModal: function() {
-    this.setState({modalIsOpen: false});
+    this.refs.modal.close();
   },
-
-  handleClickInterviewRow : function(rowData) {
+  handleClickInterviewRow: function(rowData) {
     this.openModal();
   },
+  handleCancel: function() {
 
-  render : function() {
+  },
+  render: function() {
     var that = this;
-    const customModalStyles = {
-      overlay : {
-        backgroundColor : 'rgba(0,0,0,0.5)'
-      },
-      content : {
-
-      }
-    };
     return (
       <div className='page'>
         <Modal
-          isOpen={this.state.modalIsOpen}
-          onRequestClose={this.closeModal}
-          style={customModalStyles}>
+          ref="modal"
+          confirm="OK"
+          cancel="Cancel"
+          onCancel={this.handleCancel}
+          onConfirm={this.closeModal}
+          title="Hello, Bootstrap!">
+            This is a React component powered by jQuery and Bootstrap!
         </Modal>
         <VerticalLayout>
           <VerticalLayoutItem cssClass='midHeader'>
