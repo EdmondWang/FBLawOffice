@@ -27,6 +27,7 @@
     "webpack-dev-server": "^1.12.1"
   },
   "dependencies": {
+    "ammap3": "github:amcharts/ammap3",
     "animate.css": "^3.4.0",
     "babel-core": "^6.1.2",
     "babel-loader": "^6.0.1",
