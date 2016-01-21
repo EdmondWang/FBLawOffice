@@ -14,10 +14,18 @@ var TabStrip = require('../components/TabStrip.js');
 var ContentList = require('../components/ContentList.js');
 var Modal = require('../components/Modal.js');
 
+var InterviewStore = {
+
+};
+
+
 var RoadPage = React.createClass({
 
   getDefaultProps: function() {
 
+  },
+  getInitialState: function() {
+    return InterviewStore;
   },
   openModal: function() {
     this.refs.modal.open();
@@ -29,7 +37,7 @@ var RoadPage = React.createClass({
     this.openModal();
   },
   handleCancel: function() {
-
+    this.closeModal();
   },
   render: function() {
     var that = this;

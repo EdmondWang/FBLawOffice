@@ -16,10 +16,7 @@ var BootstrapButton = React.createClass({
 
 var Modal = React.createClass({
 
-  // The following two methods are the only places we need to
-  // integrate Bootstrap or jQuery with the components lifecycle methods.
   componentDidMount: function() {
-    // When the component is added, turn it into a modal
     $(this.refs.root).modal({backdrop: 'static', keyboard: false, show: false});
   },
   componentWillUnmount: function() {

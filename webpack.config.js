@@ -1,11 +1,15 @@
-var webpack = require("webpack");
+var webpack = require('webpack');
 
 module.exports = {
-  entry: [
-    // 'webpack-dev-server/client?http://127.0.0.0:3001', // WebpackDevServer host and port
-    // 'webpack/hot/only-dev-server',
-    __dirname + '/web/js/entry' // Your appʼs entry point
-  ],
+  // entry: [
+  //   // 'webpack-dev-server/client?http://127.0.0.0:3001', // WebpackDevServer host and port
+  //   // 'webpack/hot/only-dev-server',
+  //   __dirname + '/web/js/entry' // Your appʼs entry point
+  // ],
+  entry: {
+    vendor: ['jquery', 'bootstrap', 'marked', 'react', 'react-intl', 'react-router'],
+    app: __dirname + '/web/js/entry'
+  },
   output: {
     crossOriginLoading: true,
     path: __dirname +'/build',
@@ -40,10 +44,19 @@ module.exports = {
   plugins: [
     // new webpack.HotModuleReplacementPlugin(),
     new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
-      "window.jQuery": "jquery"
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      filename: "vendor.js",
+      // (Give the chunk a different name)
+      minChunks: Infinity,
+      // (with more entries, this ensures that no other module
+      //  goes into the vendor chunk)
     })
+    // new webpack.optimize.MinChunkSizePlugin(minSize)
   ],
   resolve: {
     root: [process.cwd() + '/web', process.cwd() + '/node_modules'],
