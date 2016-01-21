@@ -1,7 +1,6 @@
 var React = require('react');
 import { Router, Route, Link, browserHistory } from 'react-router';
 var css = require('../css/App.css');
-var WebI18n = require('./components/WebI18n.js');
 var intlData = require('./locales/lang-zh-CN.js');
 
 var App = React.createClass({

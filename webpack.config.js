@@ -7,7 +7,7 @@ module.exports = {
   //   __dirname + '/web/js/entry' // Your appʼs entry point
   // ],
   entry: {
-    vendor: ['jquery', 'bootstrap', 'marked', 'react', 'react-intl', 'react-router'],
+    vendor: ['jquery', 'bootstrap', 'marked', 'react', 'react-router'],
     app: __dirname + '/web/js/entry'
   },
   output: {
