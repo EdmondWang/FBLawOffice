@@ -1,3 +1,4 @@
+require('./layout.js');
 var React = require('react');
 var ReactDOM = require('react-dom');
 import { Router, Route, Link, browserHistory } from 'react-router';
