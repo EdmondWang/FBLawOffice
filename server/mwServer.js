@@ -24,8 +24,9 @@ app.use(i18n.init);
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+var reverseProxyHost = process.env.PROD == 'true' ? '114.55.9.64:80' : 'localhost:3000';
 app.get('/', function(req, res) {
-  res.render('layout', {hostname: req.hostname});
+  res.render('layout', {host: reverseProxyHost});
 });
 
 // Routers
