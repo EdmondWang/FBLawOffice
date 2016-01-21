@@ -1,7 +1,6 @@
 var React = require('react');
 var $ = require('jquery');
 var css = require('../../css/components/Modal.css');
-var bootstrap = require('bootstrap');
 
 var BootstrapButton = React.createClass({
   render: function() {

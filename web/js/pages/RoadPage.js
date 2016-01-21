@@ -13,6 +13,8 @@ var Paragraph = require('../components/Paragraph.js');
 var TabStrip = require('../components/TabStrip.js');
 var ContentList = require('../components/ContentList.js');
 var Modal = require('../components/Modal.js');
+var bootstrap = require('bootstrap');
+require('../../../node_modules/bootstrap/dist/css/bootstrap.css');
 
 var InterviewStore = {
 
