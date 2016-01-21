@@ -11,7 +11,7 @@ html
       div#app
       //- script(type='text/javascript' charset='utf-8' src='/jquery/dist/jquery.js')
       script(type='text/javascript').
-        var contextPath = 'http://localhost:80/'
+        var contextPath = 'http://#{hostname}:80/';
       script(type='text/javascript' charset='utf-8' src='http://localhost:3000/vendor.js')
       script(type='text/javascript' charset='utf-8' src='http://localhost:3000/bundle.js')
       //- script(type='text/javascript' charset='utf-8' src='/js/layout.js')

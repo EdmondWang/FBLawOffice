@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 app.get('/', function(req, res) {
-  res.render('layout', {});
+  res.render('layout', {hostname: req.hostname});
 });
 
 // Routers
