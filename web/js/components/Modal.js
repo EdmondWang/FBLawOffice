@@ -16,7 +16,7 @@ var BootstrapButton = React.createClass({
 var Modal = React.createClass({
 
   componentDidMount: function() {
-    $(this.refs.root).modal({backdrop: 'static', keyboard: false, show: false});
+    $(this.refs.root).modal({backdrop: 'static', keyboard: true, show: false});
   },
   componentWillUnmount: function() {
     $(this.refs.root).off('hidden', this.handleHidden);
@@ -59,14 +59,10 @@ var Modal = React.createClass({
                 onClick={this.handleCancel}>
                 &times;
               </button>
-              <h3>{this.props.title}</h3>
+              <h4 className='m-title'>{this.props.title}</h4>
             </div>
             <div className="modal-body">
               {this.props.children}
-            </div>
-            <div className="modal-footer">
-              {cancelButton}
-              {confirmButton}
             </div>
           </div>
         </div>

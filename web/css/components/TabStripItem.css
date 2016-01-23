@@ -8,10 +8,10 @@
 }
 
 .ts-title:hover {
-  color: #A62B4D;
+  color: #b30000;
   cursor: pointer;
 }
 
 .ts-title.current {
-  color: #A62B4D;
+  color: #b30000;
 }

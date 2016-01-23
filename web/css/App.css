@@ -93,7 +93,7 @@ li.app-menu-item a {
 
 li.app-menu-item a.active {
   font-weight: bold;
-  color: #A62B4D;
+  color: #b30000;
   text-decoration: none;
   outline: none;
 }
@@ -107,7 +107,7 @@ li.app-menu-item a:visited {
 
 li.app-menu-item a:hover {
   font-weight: bold;
-  color: #A62B4D;
+  color: #b30000;
   text-decoration: none;
   outline: none;
 }
@@ -147,7 +147,7 @@ li.app-menu-item a:active {
 }
 
 #app-bottom a:hover {
-  color: #A62B4D;
+  color: #b30000;
   text-decoration: none;
   cursor: pointer;
 }

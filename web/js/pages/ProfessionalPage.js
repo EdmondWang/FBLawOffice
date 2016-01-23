@@ -1,4 +1,5 @@
 var React = require('react');
+var intlData = require('../locales/lang-zh-CN.js');
 var MidHeader = require('../components/MidHeader.js');
 var VerticalLayout = require('../components/VerticalLayout.js');
 var VerticalLayoutItem = require('../components/VerticalLayoutItem.js');
@@ -29,7 +30,7 @@ var ProfessionalPage = React.createClass({
           cancel='Cancel'
           onCancel={this.handleCancel}
           onConfirm={this.closeModal}
-          title='Hello, Bootstrap!'>
+          title={intlData.messages.TEXT_Bingwen_LawerIntro}>
             <UserProfile ref='userProfile'></UserProfile>
         </Modal>
         <VerticalLayout>

@@ -11,12 +11,12 @@
 }
 
 .sn-navName:hover {
-  color: #A62B4D;
+  color: #b30000;
   cursor: pointer;
 }
 
 .sn-navName.current {
-  color: #A62B4D;
+  color: #b30000;
 }
 
 .sn-viewport {

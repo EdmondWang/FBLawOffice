@@ -15,7 +15,7 @@ var App = React.createClass({
               </div>
               <div className='col-sm-5 col-md-5 col-lg-5'>
                 <a href='#/home'>
-                  <img src='/img/logo-fullName_250x40.png' alt={intlData.messages.APP_Title} />
+                  <img src='/img/logoX0.7.png' alt={intlData.messages.APP_Title} />
                 </a>
               </div>
               <div className='col-sm-5 col-md-5 col-lg-5'>

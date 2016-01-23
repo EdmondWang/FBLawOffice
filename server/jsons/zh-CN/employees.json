@@ -6,7 +6,7 @@
       "field": "公司与并购",
       "mail": "wuxj@junhe.com",
       "phone": "(86-10) 85192143",
-      "avatr": ""
+      "avatr": "employee_0.jpg"
     },
     {
       "id": "1",
@@ -14,7 +14,7 @@
       "field": "已退休 ",
       "mail": "wangzhl@junhe.com",
       "phone": "(86-10) 85191360",
-      "avatr": ""
+      "avatr": "employee_1.jpg"
     },
     {
       "id": "2",
@@ -22,7 +22,7 @@
       "field": "资本市场",
       "mail": "xiaow@junhe.com",
       "phone": "(86-10) 85191302",
-      "avatr": ""
+      "avatr": "employee_2.jpg"
     },
     {
       "id": "3",
@@ -30,7 +30,7 @@
       "field": "资本市场",
       "mail": "(86-10) 85191310",
       "phone": "lujn@junhe.com",
-      "avatr": ""
+      "avatr": "employee_3.jpg"
     },
     {
       "id": "4",
@@ -38,7 +38,7 @@
       "field": "公司与并购 争议解决 ",
       "mail": "gongj@junhe.com",
       "phone": "(86-10) 85191301",
-      "avatr": ""
+      "avatr": "null"
     }
   ]
 }

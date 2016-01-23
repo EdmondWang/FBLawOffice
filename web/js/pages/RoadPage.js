@@ -74,7 +74,7 @@ var RoadPage = React.createClass({
               <ScrollableNavItem name={intlData.messages.NAV_History}>
                 <TabStrip
                   items={[
-                    intlData.messages.TEXT_Fangben_MileStone,
+                    intlData.messages.TEXT_Bingwen_MileStone,
                     intlData.messages.TEXT_LawOfficeInterview,
                     intlData.messages.TEXT_CorporationInterview]}
                   contents={[

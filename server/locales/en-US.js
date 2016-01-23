@@ -1,5 +1,5 @@
 {
-    "APP_Title": "Fangben Law Office",
+    "APP_Title": "Bingwen Law Office",
 
     "MENU_OurRoad": "OUR ROAD",
     "MENU_News&Deals": "NEWS&DEALS",
@@ -11,7 +11,7 @@
     "MENU_Careers": "CAREERS",
     "MENU_ContactUs": "CONTACT US",
 
-    "BOTTOM_Rights": "©Fangben All Rights Reserved, 苏ICP备11033038号",
+    "BOTTOM_Rights": "©Bingwen All Rights Reserved, 苏ICP备11033038号",
     "BOTTOM_SiteMap": "网站地图",
     "BOTTOM_LegalDeclaration": "法律声明",
 }
