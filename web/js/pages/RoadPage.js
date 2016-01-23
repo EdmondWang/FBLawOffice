@@ -77,6 +77,7 @@ var RoadPage = React.createClass({
                     intlData.messages.TEXT_CorporationInterview]}
                   contents={[
                     <TabStrip
+                      isChildLevel='true'
                       items={['2016', '2015', '2014', '2013', '2012', '2011']}
                       contents={[
                         <ContentList source={contextPath + 'road/milestones/2016'} />,

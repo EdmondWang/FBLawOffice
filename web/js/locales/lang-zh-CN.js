@@ -18,6 +18,8 @@ var intlData = {
     "NAV_History": "发展道路",
     "NAV_Reputation": "声誉",
     "NAV_SocialResponsibility": "社会责任",
+    "NAV_LatestNews": "近期要闻",
+    "NAV_RecentDeals": "重大项目业绩",
 
     "TEXT_Bingwen_LawOffice": "秉文律师事务所",
     "TEXT_Bingwen_LawerIntro": "秉文律师介绍",

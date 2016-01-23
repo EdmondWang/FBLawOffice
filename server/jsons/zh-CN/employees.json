@@ -39,6 +39,46 @@
       "mail": "gongj@junhe.com",
       "phone": "(86-10) 85191301",
       "avatr": "null"
+    },
+    {
+      "id": "5",
+      "name": "武晓骥",
+      "field": "公司与并购",
+      "mail": "wuxj@junhe.com",
+      "phone": "(86-10) 85192143",
+      "avatr": "employee_0.jpg"
+    },
+    {
+      "id": "6",
+      "name": "王之龙",
+      "field": "已退休 ",
+      "mail": "wangzhl@junhe.com",
+      "phone": "(86-10) 85191360",
+      "avatr": "employee_1.jpg"
+    },
+    {
+      "id": "7",
+      "name": "肖微",
+      "field": "资本市场",
+      "mail": "xiaow@junhe.com",
+      "phone": "(86-10) 85191302",
+      "avatr": "employee_2.jpg"
+    },
+    {
+      "id": "8",
+      "name": "吕家能",
+      "field": "资本市场",
+      "mail": "(86-10) 85191310",
+      "phone": "lujn@junhe.com",
+      "avatr": "employee_3.jpg"
+    },
+    {
+      "id": "9",
+      "name": "巩军",
+      "field": "公司与并购 争议解决 ",
+      "mail": "gongj@junhe.com",
+      "phone": "(86-10) 85191301",
+      "avatr": "null"
     }
   ]
 }

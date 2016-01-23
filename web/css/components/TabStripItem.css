@@ -1,10 +1,16 @@
 .ts-title {
   list-style: none;
-  line-height: 12px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: Verdana, 微软雅黑;
+  color: #aaa;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 22px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-right: 1px solid #b0b0b0;
   display: inline-block;
-  padding-left: 4px;
-  padding-right: 4px;
-  border-right: 1px solid #444;
 }
 
 .ts-title:hover {
@@ -14,4 +20,12 @@
 
 .ts-title.current {
   color: #b30000;
+}
+
+.ts-title-noLeftPad {
+  padding-left: 0;
+}
+
+.ts-title-childLevel {
+  font-size: 14px;
 }

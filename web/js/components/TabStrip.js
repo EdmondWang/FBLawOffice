@@ -30,6 +30,7 @@ var TabStrip = React.createClass({
       return (<TabStripItem
         key={index}
         index={index}
+        isChildLevel={that.props.isChildLevel}
         title={itemTitle}
         onTabTitleClick={that.handleClickOnTabTitle.bind(that, index)}>
       </TabStripItem>)
