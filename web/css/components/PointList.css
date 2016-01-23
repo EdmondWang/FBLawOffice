@@ -1,0 +1,31 @@
+.pl-container {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.pl-point {
+  background-image: url('/img/circle_btn.png');
+  background-repeat: no-repeat;
+  width: 126px;
+  height: 126px;
+  margin: 0 10px 10px 10px;
+  display: inline-block;
+}
+
+.pl-point:hover {
+  background-position: -258px 0;;
+  cursor: pointer;
+}
+
+.pl-text {
+  line-height: 126px;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+.pl-text:hover {
+  color: white;
+}

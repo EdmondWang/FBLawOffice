@@ -13,7 +13,7 @@ module.exports = {
   output: {
     crossOriginLoading: true,
     path: __dirname +'/build',
-    publicPath: 'http://localhost:3000/web/',
+    // publicPath: 'http://localhost:3000/',
     filename: 'bundle.js', // '[hash:8].[name].min.js'
   },
   module: {
@@ -34,7 +34,7 @@ module.exports = {
       },
       {test: /\.(png|jpg)$/, loader: 'url?limit=8192'},
       {test: /\.css$/, loader: 'style!css!less'},
-      {test: /\.eot/,loader : 'file?prefix=font/'},
+      {test: /\.eot/, loader : 'file?prefix=font/'},
       {test: /\.woff/,loader : 'file?prefix=font/&limit=10000&mimetype=application/font-woff'},
       {test: /\.ttf/, loader : 'file?prefix=font/'},
       {test: /\.svg/, loader : 'file?prefix=font/'},

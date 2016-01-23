@@ -42,6 +42,9 @@ app.use('/road', road);
 var professional = require('./routers/professional');
 app.use('/professional', professional);
 
+var practices = require('./routers/practice');
+app.use('/practices', practices);
+
 // var road = require('./routers/home');
 // app.use('/road', road);
 
