@@ -3,13 +3,16 @@ var $ = require('jquery');
 var css = require('../../css/components/UserProfile.css');
 var intlData = require('../locales/lang-zh-CN.js');
 
-var userStore = {
+/*
   name: '',
   mail: '',
   phone: '',
   mail: '',
   avatr: ''
+*/
+var userStore = {
 };
+
 var UserProfile = React.createClass({
 
   getInitialState : function() {
