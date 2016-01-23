@@ -1,5 +1,8 @@
 var React = require('react');
 import { Router, Route, Link, browserHistory } from 'react-router';
+require('bootstrap');
+require('../../node_modules/bootstrap/dist/css/bootstrap.css');
+
 var css = require('../css/App.css');
 var intlData = require('./locales/lang-zh-CN.js');
 

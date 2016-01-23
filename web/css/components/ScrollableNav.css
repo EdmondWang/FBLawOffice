@@ -10,6 +10,10 @@
   width: 20%;
 }
 
+.sn-navName {
+  margin-bottom: 10px;
+}
+
 .sn-navName:hover {
   color: #b30000;
   cursor: pointer;
