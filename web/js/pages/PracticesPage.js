@@ -28,9 +28,18 @@ var PracticesPage = React.createClass({
   handleCancel: function() {
     this.closeModal();
   },
+  componentDidMount: function() {
+    var $modal = $(this.refs.modal);
+    $modal.on('shown.bs.modal', function(){
+      var $this = $(this);
+      var $modal_dialog = $this.find('.modal-dialog');
+      var m_top = ( $(document).height() - $modal_dialog.height() )/2;
+      $modal_dialog.css({'margin': m_top + 'px auto'});
+    });
+  },
   render : function() {
     return (
-      <div class='page'>
+      <div className='page'>
         <Modal
           ref='modal'
           confirm='OK'
