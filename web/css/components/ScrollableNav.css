@@ -8,10 +8,12 @@
 .sn-navNameBar {
   float: left;
   width: 20%;
+  padding-left: 16px;
+  border-left: 1px solid #ccc;
 }
 
 .sn-navName {
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
 .sn-navName:hover {

@@ -55,13 +55,14 @@ a:focus {
 }
 
 #app-top {
-  padding-top: 36px;
+  padding-top: 6px;
   padding-bottom: 10px;
   background-color: #fff;
 }
 
 #app-nav {
   background-color: #fff;
+  padding-bottom: 12px;
 }
 
 .app-searchAndLang {
