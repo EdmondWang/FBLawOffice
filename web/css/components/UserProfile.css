@@ -5,13 +5,14 @@
 }
 
 .up-left {
-  width: 30%;
+  width: 36%;
   display: inline-block;
 }
 
 .up-right {
-  width: 70%;
+  width: 64%;
   display: inline-block;
+  vertical-align: top;
 }
 
 .up-row {

@@ -2,6 +2,18 @@ var React = require('react');
 var $ = require('jquery');
 var css = require('../../css/components/UserProfile.css');
 var intlData = require('../locales/lang-zh-CN.js');
+var json2md = require('json2md');
+var marked = require('marked');
+marked.setOptions({
+  renderer: new marked.Renderer(), // An object containing functions to render tokens to HTML.
+  gfm: true, // Enable GitHub flavored markdown.
+  tables: true, // Enable GFM tables. This option requires the gfm option to be true.
+  breaks: false,
+  pedantic: false,
+  sanitize: true,
+  smartLists: true,
+  smartypants: false
+});
 
 /*
   name: '',
@@ -22,6 +34,14 @@ var UserProfile = React.createClass({
     // MAY be AJAX in the future
   },
   componentWillUnmount : function() {
+  },
+  createMarkdown : function(str) {
+    var htmlStr = '';
+    if (str != null && typeof str != 'undefined') {
+      htmlStr = marked(json2md(str));
+    }
+    debugger;
+    return {__html: htmlStr};
   },
   render : function() {
     return (
@@ -65,9 +85,10 @@ var UserProfile = React.createClass({
           </div>
         </div>
         <div className='up-right'>
-          <div className='up-row'>
-            {this.state.description}
-          </div>
+          <div
+            className='up-row'
+            dangerouslySetInnerHTML={this.createMarkdown(this.state.description)}
+          />
         </div>
       </div>
     );

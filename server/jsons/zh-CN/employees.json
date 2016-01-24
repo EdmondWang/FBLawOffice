@@ -6,7 +6,11 @@
       "field": "公司与并购",
       "mail": "wuxj@junhe.com",
       "phone": "(86-10) 85192143",
-      "avatr": "employee_0.jpg"
+      "avatr": "employee_0.jpg",
+      "description": [
+        {"h4" : "卓越的工作能力"},
+        {"p": "Below you can see a code block example."}
+      ]
     },
     {
       "id": "1",
