@@ -56,12 +56,12 @@ module.exports = {
       // (with more entries, this ensures that no other module
       //  goes into the vendor chunk)
     })
-    ,
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
-    })
+    // ,
+    // new webpack.optimize.UglifyJsPlugin({
+    //   compress: {
+    //     warnings: false
+    //   }
+    // })
   ],
   resolve: {
     root: [process.cwd() + '/web', process.cwd() + '/node_modules'],
