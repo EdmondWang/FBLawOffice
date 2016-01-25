@@ -127,6 +127,14 @@ li.app-menu-item a:active {
   height: 100%;
 }
 
+@media (min-width: 1200px) and (max-width: 1920px) {
+  .page {
+    width: 1000px !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .midHeader {
   height: 33px;
 }

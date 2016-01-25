@@ -6,15 +6,25 @@
 .cl-row {
   width: 100%;
   height: auto;
+  padding: 14px;
+  background-color: #efefef;
+  border-bottom: 1px solid #ccc;
+}
+
+.cl-row:hover {
+  border-bottom: 1px solid #b30000;
 }
 
 .cl-text {
   display: inline-block;
   width: 80%;
+  padding: 6px;
+  border-right: 1px solid #ccc;
 }
 
 .cl-comment {
   display: inline-block;
   width: 20%;
   vertical-align: middle;
+  text-align: center;
 }
