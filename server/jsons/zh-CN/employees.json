@@ -9,7 +9,19 @@
       "avatr": "employee_0.jpg",
       "description": [
         {"h4" : "卓越的工作能力"},
-        {"p": "Below you can see a code block example."}
+        {"p": "Below you can see a code block example."},
+        {"p": "武晓骥律师为君合律师事务所合伙人。"},
+        {"p": "武晓骥律师1983年毕业于中国政法大学法律系，获法学学士学位。毕业后，任职于中华人民共和国对外经济贸易部所属的中国对外经济贸易咨询公司并全面负责法律咨询部的工作。在此期间，曾向诸多中外企业、公司、政府部门等提供了大量的法律咨询服务。"},
+        {"p": "自1984年10月起，武晓骥律师开始从事律师业务。1985年初，武晓骥提议并直接参与筹备和创建对外经济贸易部所属的\"长城对外经济律师事务所\"，并参加了若干大中型中外合资项目的谈判、合同起草及审定工作，承办了大量的经济合同诉讼和涉外仲裁案件。"},
+        {
+          "p": "武晓骥律师于1985年-1988年间，以访问学者身份赴美国亚利桑那州大学法学院学习，对投资法、贸易法、商法、公司法等进行了较为深入的研究。同一时期，武晓骥观摩和考察了当地各种规模的美国律师事务所，并与美国律师界、工商界建立了广泛的联系。"
+        },
+        {
+          "p": "武晓骥律师于1989年4月提议并参与创办君合律师事务所。十几年来，武晓骥律师先后为国内外近百家公司、企业提供了各方面的法律服务，尤其擅长公司业务、房地产、外商投资、股份制改造、国际贸易业务。"
+        },
+        {
+          "p":"武晓骥律师是中国法学会和亚洲－太平洋律师协会会员。1995年，武晓骥律师当选为中华全国律师协会第三届常务理事，并分别于1995年和1998年当选为第四届和第五届北京市律师协会会长。2002年武晓骥律师当选为中华全国工商联第九届执委。"
+        }
       ]
     },
     {
@@ -18,7 +30,12 @@
       "field": "已退休 ",
       "mail": "wangzhl@junhe.com",
       "phone": "(86-10) 85191360",
-      "avatr": "employee_1.jpg"
+      "avatr": "employee_1.jpg",
+      "description": [
+        {"h4" : "卓越的工作能力"},
+        {"p": "Below you can see a code block example."},
+        {"p": "Below you can see a code block example."}
+      ]
     },
     {
       "id": "2",
@@ -26,7 +43,11 @@
       "field": "资本市场",
       "mail": "xiaow@junhe.com",
       "phone": "(86-10) 85191302",
-      "avatr": "employee_2.jpg"
+      "avatr": "employee_2.jpg",
+      "description": [
+        {"h4" : "卓越的工作能力"},
+        {"p": "Below you can see a code block example."}
+      ]
     },
     {
       "id": "3",
@@ -34,7 +55,11 @@
       "field": "资本市场",
       "mail": "(86-10) 85191310",
       "phone": "lujn@junhe.com",
-      "avatr": "employee_3.jpg"
+      "avatr": "employee_3.jpg",
+      "description": [
+        {"h4" : "卓越的工作能力"},
+        {"p": "Below you can see a code block example."}
+      ]
     },
     {
       "id": "4",
@@ -42,7 +67,11 @@
       "field": "公司与并购 争议解决 ",
       "mail": "gongj@junhe.com",
       "phone": "(86-10) 85191301",
-      "avatr": "null"
+      "avatr": "null",
+      "description": [
+        {"h4" : "卓越的工作能力"},
+        {"p": "Below you can see a code block example."}
+      ]
     },
     {
       "id": "5",
@@ -50,7 +79,11 @@
       "field": "公司与并购",
       "mail": "wuxj@junhe.com",
       "phone": "(86-10) 85192143",
-      "avatr": "employee_0.jpg"
+      "avatr": "employee_0.jpg",
+      "description": [
+        {"h4" : "卓越的工作能力"},
+        {"p": "Below you can see a code block example."}
+      ]
     },
     {
       "id": "6",
@@ -58,7 +91,11 @@
       "field": "已退休 ",
       "mail": "wangzhl@junhe.com",
       "phone": "(86-10) 85191360",
-      "avatr": "employee_1.jpg"
+      "avatr": "employee_1.jpg",
+      "description": [
+        {"h4" : "卓越的工作能力"},
+        {"p": "Below you can see a code block example."}
+      ]
     },
     {
       "id": "7",
@@ -66,7 +103,11 @@
       "field": "资本市场",
       "mail": "xiaow@junhe.com",
       "phone": "(86-10) 85191302",
-      "avatr": "employee_2.jpg"
+      "avatr": "employee_2.jpg",
+      "description": [
+        {"h4" : "卓越的工作能力"},
+        {"p": "Below you can see a code block example."}
+      ]
     },
     {
       "id": "8",
@@ -74,7 +115,11 @@
       "field": "资本市场",
       "mail": "(86-10) 85191310",
       "phone": "lujn@junhe.com",
-      "avatr": "employee_3.jpg"
+      "avatr": "employee_3.jpg",
+      "description": [
+        {"h4" : "卓越的工作能力"},
+        {"p": "Below you can see a code block example."}
+      ]
     },
     {
       "id": "9",
@@ -82,7 +127,11 @@
       "field": "公司与并购 争议解决 ",
       "mail": "gongj@junhe.com",
       "phone": "(86-10) 85191301",
-      "avatr": "null"
+      "avatr": "null",
+      "description": [
+        {"h4" : "卓越的工作能力"},
+        {"p": "Below you can see a code block example."}
+      ]
     }
   ]
 }
